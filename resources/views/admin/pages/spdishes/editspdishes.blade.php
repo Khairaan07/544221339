@@ -4,8 +4,8 @@
 			<div class="col-md-6 grid-margin stretch-card">
 				<div class="card">
 					<div class="card-body">
-						<h4 class="card-title">Special Dishes Form</h4>
-						<p class="card-description">Edit special dishes info</p>
+						<h4 class="card-title">Halaman Menu Spesial</h4>
+						<p class="card-description">Ubah Menu Spesial</p>
 						<form action="{{ route('specialdishes.update', $data->id ) }}" method="post" enctype="multipart/form-data">
 							@method('PUT')
 							@csrf
@@ -44,7 +44,7 @@
 									name="spdishespriceedit"
 									value="{{ $data->price }}"
 									placeholder="Input dish price up to 2 decimal places"
-									pattern="[0-9]+([\.,][0-9]+)?" 
+									pattern="[0-9]+([\.,][0-9]+)?"
 									step="0.01"
 									repuired
 								/>
@@ -98,6 +98,6 @@
 		    tempspdishesimageedit.src = URL.createObjectURL(file)
 		  }
 		}
-		
+
 	</script>
 </x-admin.index>

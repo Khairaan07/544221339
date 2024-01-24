@@ -3,9 +3,9 @@
 		<div class="col-lg-8 grid-margin stretch-card">
 			<div class="card">
 				<div class="card-body">
-					<h4 class="card-title">User Data-Table</h4>					
+					<h4 class="card-title">User Data-Table</h4>
 					<p class="card-description">
-						User information table 
+						Informasi tabel user
 					</p>
 					<table class="table table-hover">
 						<thead>
@@ -19,8 +19,8 @@
 							@if ($isAdmin === false)
 							<tr>
 								<td>Only Admin can</td>
-								<td>view or edit</td>								
-								<td>users</td>								
+								<td>view or edit</td>
+								<td>users</td>
 								<td>data</td>
 							</tr>
 							@else
@@ -36,9 +36,9 @@
 												@csrf
 
 								        <div class="form-group">
-								        	<button 
-								        		type="submit" 
-								        		class="badge badge-danger cursor-pointer" 
+								        	<button
+								        		type="submit"
+								        		class="badge badge-danger cursor-pointer"
 								        		onclick="return confirmDeleteUser({{ $data->id }} , '{{ $data->name }}');"
 								        		>Delete</button>
 								        </div>

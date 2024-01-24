@@ -7,15 +7,15 @@
 		<div class="col-lg-12 grid-margin stretch-card">
 			<div class="card">
 				<div class="card-body">
-					<h4 class="card-title">Special-Dish Data-Table</h4>					
+					<h4 class="card-title">Menu Spesial Data-Table</h4>
 					<p class="card-description">
-						Special-Dish information table  
+						Tabel Informasi Menu Spesial
 					</p>
 
 					@if(session()->has('msg'))
 					<p class="alert alert-info">{{ session()->get('msg') }}</p>
 					@endif
-					
+
 					<table class="table table-hover overflow-auto block">
 						<thead>
 							<tr class="bg-slate-800">
@@ -29,13 +29,13 @@
 							<tr>
 								<td class="w-32">
 									<img src="{{$data->img}}" alt="{{$data->name}}" class="!w-full !h-auto !rounded-none">
-								</td>							
+								</td>
 								<td>
 									<p class="font-bold">
 		                <span class="text-amber-400">{{ $data['namepart1'] }}</span> <span class="leading-normal">{{ $data['namepart2'] }}</span>
 		              </p>
 		            </td>
-								<td>{{$data->price}}</td>								
+								<td>{{$data->price}}</td>
 								<td class="max-w-[190px] min-w-[190px] !leading-normal !whitespace-normal break-words">{{$data->desc}}</td>
 								<td>{{$data->created_at}}</td>
 								<td>
@@ -50,9 +50,9 @@
 									<form method="POST" action="{{ route('specialdishes.destroy', $data->id) }}">
 						        @method('DELETE')
 										@csrf
-					        	<button 
-					        		type="submit" 
-					        		class="badge badge-danger cursor-pointer" 
+					        	<button
+					        		type="submit"
+					        		class="badge badge-danger cursor-pointer"
 					        		onclick="return confirmDeleteSpDish({{ $data->id }} , '{{ $data->name }}');"
 					        		>Delete</button>
 								  </form>

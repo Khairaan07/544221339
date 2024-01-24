@@ -19,7 +19,7 @@ class CreateReservationsTable extends Migration
             $table->string('phone_number');
             $table->string('date');
             $table->string('time')->nullable();
-            $table->enum('person', ['1', '2', '3', '4', '5', '6']);
+            $table->enum('person', ['1', '2', '3', '4', '5', '6','7','8','9']);
             $table->timestamps();
         });
     }

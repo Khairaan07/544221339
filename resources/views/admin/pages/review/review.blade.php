@@ -7,15 +7,15 @@
 		<div class="col-lg-12 grid-margin stretch-card">
 			<div class="card">
 				<div class="card-body">
-					<h4 class="card-title">Testimonial Data-Table</h4>					
+					<h4 class="card-title">Testimonial Data-Table</h4>
 					<p class="card-description">
-						Client testiomonials information table 
+						Tabel Informasi testimoni
 					</p>
 
 					@if(session()->has('msg'))
 					<p class="alert alert-info">{{ session()->get('msg') }}</p>
 					@endif
-					
+
 					<table class="table table-hover overflow-auto block">
 						<thead>
 							<tr class="bg-slate-800">
@@ -31,8 +31,8 @@
 									<img src="{{$data->img}}" alt="{{$data->name}}" class="!w-full !h-auto !rounded-none">
 								</td>
 								<td>{{$data->name}}</td>
-								<td>{{$data->bio}}</td>								
-								<td>{{$data->rating}}</td>								
+								<td>{{$data->bio}}</td>
+								<td>{{$data->rating}}</td>
 								<td class="max-w-[190px] min-w-[190px] !leading-normal !whitespace-normal break-words">{{$data->review}}</td>
 								<td>{{$data->created_at}}</td>
 								<td>
@@ -47,9 +47,9 @@
 									<form method="POST" action="{{ route('testimonial.destroy', $data->id) }}">
 						        @method('DELETE')
 										@csrf
-					        	<button 
-					        		type="submit" 
-					        		class="badge badge-danger cursor-pointer" 
+					        	<button
+					        		type="submit"
+					        		class="badge badge-danger cursor-pointer"
 					        		onclick="return confirmDeleteReview({{ $data->id }} , '{{ $data->name }}');"
 					        		>Delete</button>
 								  </form>

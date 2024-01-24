@@ -4,8 +4,8 @@
 			<div class="col-md-6 grid-margin stretch-card">
 				<div class="card">
 					<div class="card-body">
-						<h4 class="card-title">Special Dishes Add Form</h4>
-						<p class="card-description">Add special dishes info</p>
+						<h4 class="card-title">Menu Spesial</h4>
+						<p class="card-description">Tambahkan Menu Spesial</p>
 						<form action="{{ route('specialdishes.store') }}" method="post" enctype="multipart/form-data">
 							@csrf
 							<div class="form-group">
@@ -40,7 +40,7 @@
 									id="spdishesprice"
 									name="spdishesprice"
 									placeholder="Input dish price up to 2 decimal places"
-									pattern="[0-9]+([\.,][0-9]+)?" 
+									pattern="[0-9]+([\.,][0-9]+)?"
 									step="0.01"
 									repuired
 								/>
@@ -88,16 +88,16 @@
 		</div>
 	</div>
 	<script>
-		var imgInput = document.getElementById("spdishesimage");		
+		var imgInput = document.getElementById("spdishesimage");
 		imgInput.addEventListener('change', (event) => {
 			if (event.target.files[0]) {
         var reader = new FileReader();
-        
-				var imgTemp = document.getElementById("tempspdishesimage");	  
+
+				var imgTemp = document.getElementById("tempspdishesimage");
         reader.onload = function (e) {
         	imgTemp.setAttribute("src", e.target.result);
         }
-        
+
         reader.readAsDataURL(event.target.files[0]);
 
         if (imgTemp.style.display === "inline") {
@@ -107,6 +107,6 @@
 			  }
 	    }
 		});
-		
+
 	</script>
 </x-admin.index>

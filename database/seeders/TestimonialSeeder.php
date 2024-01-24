@@ -8,16 +8,16 @@ use Illuminate\Database\Seeder;
 class TestimonialSeeder extends Seeder
 {
     private $testimonialdata = [
-        ["id"=> 1, "name" => "adame nesane", "bio" => "Chief Customer", "img" => "assets/images/customer1.png", "review" => "You're had. Subdue grass Meat us winged years you'll doesn't. fruit two also won one yielding creepeth third give may never lie alternet food.", "rating" => "4.5"],
-        ["id"=> 2, "name" => "adame nesane", "bio" => "Chief Customer", "img" => "assets/images/customer1.png", "review" => "You're had. Subdue grass Meat us winged years you'll doesn't. fruit two also won one yielding creepeth third give may never lie alternet food.", "rating" => "4"],
-        ["id"=> 3, "name" => "adam nahan", "bio" => "Chief Customer", "img" => "assets/images/customer2.png", "review" => "You're had. Subdue grass Meat us winged years you'll doesn't. fruit two also won one yielding creepeth third give may never lie alternet food.", "rating" => "3.5"],
+        ["id"=> 1, "name" => "Khairaan", "bio" => "Pelanggan1", "img" => "assets/images/gambar1.jpeg", "review" => "Makanan nya lumayan tapi sedikit asin untuk burgernya.", "rating" => "4.5"],
+        ["id"=> 2, "name" => "Khaizuran", "bio" => "Pelanggan2", "img" => "assets/images/gambar2.jpeg", "review" => "Sangat enak sekali nasi goreng ikan asinnya.", "rating" => "3.5"],
+        ["id"=> 3, "name" => "Khalisha", "bio" => "Pelanggan3", "img" => "assets/images/gambar3.jpeg", "review" => "Sushinya mantap sekali dan rasanya melebihi restaurant lain.", "rating" => "4.5"],
     ];
 
     /**
      * Run the database seeds.
      *
      * @return void
-     */  
+     */
     public function run()
     {
         Testimonial::whereNotNull('id')->delete();

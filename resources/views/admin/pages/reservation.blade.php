@@ -3,9 +3,9 @@
 		<div class="col-lg-12 grid-margin stretch-card">
 			<div class="card">
 				<div class="card-body">
-					<h4 class="card-title">Reservation Data-Table</h4>					
+					<h4 class="card-title">Reservation Data-Table</h4>
 					<p class="card-description">
-						Reservation information table 
+						Informasi Tabel Reservasi
 					</p>
 					<table class="table table-hover overflow-auto block">
 						<thead>
@@ -19,9 +19,9 @@
 							@if ($isAdmin === false)
 							<tr>
 								<td>Only Admin</td>
-								<td>can view</td>								
-								<td>or edit</td>								
-								<td>reservations</td>								
+								<td>can view</td>
+								<td>or edit</td>
+								<td>reservations</td>
 								<td>info</td>
 								<td>.</td>
 							</tr>
@@ -29,9 +29,9 @@
 								@foreach($data as $data)
 								<tr>
 									<td>{{$data->name}}</td>
-									<td>{{$data->phone_number}}</td>								
-									<td>{{$data->date}}</td>								
-									<td>{{$data->time}}</td>								
+									<td>{{$data->phone_number}}</td>
+									<td>{{$data->date}}</td>
+									<td>{{$data->time}}</td>
 									<td>{{$data->person}}</td>
 									<td>{{$data->created_at}}</td>
 								</tr>

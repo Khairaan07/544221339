@@ -17,7 +17,7 @@ class CreateFoodTable extends Migration
             $table->id();
             $table->string('name', 200)->default("");
             $table->string('img', 250)->default("");
-            $table->decimal('price', $precision = 10, $scale = 2)->default(0);
+            $table->decimal('price', $precision = 10, $scale = 3)->default(0);
             $table->text('desc');
             $table->timestamps();
         });

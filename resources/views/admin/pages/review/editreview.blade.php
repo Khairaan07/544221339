@@ -5,19 +5,19 @@
 				<div class="card">
 					<div class="card-body">
 						<h4 class="card-title">Testimonial Form</h4>
-						<p class="card-description">Edit testimonial info</p>
+						<p class="card-description">Ubah Testimoni</p>
 						<form action="{{ route('testimonial.update', $data->id ) }}" method="post" enctype="multipart/form-data">
 							@method('PUT')
 							@csrf
 							<div class="form-group">
-								<label for="reviewname">Name</label>
+								<label for="reviewname">Nama</label>
 								<input
 									type="text"
 									class="form-control"
 									id="reviewname"
 									name="reviewname"
 									value="{{ $data->name }}"
-									placeholder="Input Client name"
+									placeholder="Input Nama"
 									required
 								/>
 							</div>
@@ -43,8 +43,8 @@
 									id="reviewrating"
 									name="reviewrating"
 									value="{{ $data->rating }}"
-									placeholder="Input Review Rating up to 2 decimal places"
-									pattern="[0-9]+([\.,][0-9]+)?" 
+									placeholder="Input Review Rating"
+									pattern="[0-9]+([\.,][0-9]+)?"
 									step="0.01"
 									repuired
 								/>
@@ -98,6 +98,6 @@
 		    tempreviewimageedit.src = URL.createObjectURL(file)
 		  }
 		}
-		
+
 	</script>
 </x-admin.index>

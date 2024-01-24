@@ -5,17 +5,17 @@
 				<div class="card">
 					<div class="card-body">
 						<h4 class="card-title">Testimonial Form</h4>
-						<p class="card-description">Add testimonial info</p>
+						<p class="card-description">Tambahkan Testimoni</p>
 						<form action="{{ route('testimonial.store') }}" method="post" enctype="multipart/form-data">
 							@csrf
 							<div class="form-group">
-								<label for="reviewname">Name</label>
+								<label for="reviewname">Nama</label>
 								<input
 									type="text"
 									class="form-control"
 									id="reviewname"
 									name="reviewname"
-									placeholder="Input Client Name"
+									placeholder="Masukkan Nama"
 									required
 								/>
 							</div>
@@ -27,7 +27,7 @@
 									class="form-control"
 									id="reviewbio"
 									name="reviewbio"
-									placeholder="Input Client Bio"
+									placeholder="Masukkan Bio Anda"
 									required
 								/>
 							</div>
@@ -39,8 +39,8 @@
 									class="form-control"
 									id="reviewrating"
 									name="reviewrating"
-									placeholder="Input review Rating up to 2 decimal places"
-									pattern="[0-9]+([\.,][0-9]+)?" 
+									placeholder="Rating Anda"
+									pattern="[0-9]+([\.,][0-9]+)?"
 									step="0.01"
 									repuired
 								/>
@@ -52,7 +52,7 @@
 									<input
 										type="file"
 										class="form-control file-upload-info"
-										placeholder="Upload review image"
+										placeholder="Upload Kendala anda"
 										id="reviewimage"
 										name="reviewimage"
 										required
@@ -76,11 +76,11 @@
 							</div>
 
 							@if ($isAdmin === true)
-							<button type="submit" class="btn btn-primary mr-2">Add</button>
+							<button type="submit" class="btn btn-primary mr-2">Tambahkan</button>
 							@else
-							<button onclick="alert('Only admin can add food menu')" type="button" class="btn btn-primary mr-2">Add</button>
+							<button onclick="alert('Only admin can add food menu')" type="button" class="btn btn-primary mr-2">Tambahkan</button>
 							@endif
-							<a href="{{ route("testimonial.index") }}" class="btn btn-light">Cancel</a>
+							<a href="{{ route("testimonial.index") }}" class="btn btn-light">Batalkan</a>
 						</form>
 					</div>
 				</div>
@@ -88,16 +88,16 @@
 		</div>
 	</div>
 	<script>
-		var imgInput = document.getElementById("reviewimage");		
+		var imgInput = document.getElementById("reviewimage");
 		imgInput.addEventListener('change', (event) => {
 			if (event.target.files[0]) {
         var reader = new FileReader();
-        
-				var imgTemp = document.getElementById("tempreviewimage");	  
+
+				var imgTemp = document.getElementById("tempreviewimage");
         reader.onload = function (e) {
         	imgTemp.setAttribute("src", e.target.result);
         }
-        
+
         reader.readAsDataURL(event.target.files[0]);
 
         if (imgTemp.style.display === "inline") {
@@ -107,6 +107,6 @@
 			  }
 	    }
 		});
-		
+
 	</script>
 </x-admin.index>

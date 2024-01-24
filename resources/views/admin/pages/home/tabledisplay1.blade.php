@@ -3,8 +3,8 @@
     <div class="card">
       <div class="card-body">
         <div class="d-sm-flex align-items-center mb-4">
-          <h4 class="card-title mb-sm-0">Reservation</h4>
-          <a href="{{ route('testimonial.index') }}" class="text-dark ml-auto mb-3 mb-sm-0"> View all Reservation</a>
+          <h4 class="card-title mb-sm-0">Reservasi</h4>
+          <a href="{{ route('testimonial.index') }}" class="text-dark ml-auto mb-3 mb-sm-0"> Lihat Semua Reservasi</a>
         </div>
         <div class="table-responsive border rounded p-1">
           <table class="table">

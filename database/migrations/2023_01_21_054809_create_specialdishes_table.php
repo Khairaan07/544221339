@@ -19,7 +19,7 @@ class CreateSpecialdishesTable extends Migration
             $table->string('namepart2', 200);
             $table->string('img', 250);
             $table->text('desc');
-            $table->decimal('price', $precision = 10, $scale = 2)->default(0);
+            $table->decimal('price', $precision = 10, $scale = 3)->default(0);
             $table->timestamps();
         });
     }

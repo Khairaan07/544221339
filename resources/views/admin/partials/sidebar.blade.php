@@ -4,11 +4,11 @@
     <li class="nav-item nav-profile">
       <a class="nav-link" href="{{ route('admin.index') }}">
         @if ($user !== null)
-        <div class="profile-image">
-          @if ($user->img)
+        <div class="profile-imag">
+          @if ($user->im)
           <img
-            class="img-xs rounded-circle ml-2 cursor-pointer"
-            src="{{ $user->img }}"
+            class="img-s rounded-circle ml-2 cursor-pointer"
+            src="{{ $user->i }}"
             alt="Profile image"
           />
           @else
@@ -33,35 +33,35 @@
       </a>
     </li>
     <li class="nav-item nav-category">
-      <span class="nav-link">Tables</span>
+      <span class="nav-link">Tabel</span>
     </li>
     <li class="nav-item">
       <a class="nav-link" href="{{ route('user.index') }}">
-        <span class="menu-title">Users</span>
+        <span class="menu-title">User</span>
         <i class="fa-solid fa-users menu-icon"></i>
       </a>
     </li>
     <li class="nav-item">
       <a class="nav-link" href="{{ route('foodmenu.index')}}">
-        <span class="menu-title">Food Menu</span>        
+        <span class="menu-title">Menu Makanan</span>
         <i class="fa-solid fa-bowl-rice menu-icon"></i>
       </a>
     </li>
     <li class="nav-item">
       <a class="nav-link" href="{{ route('reservation.index')}}">
-        <span class="menu-title">Reservations</span>
+        <span class="menu-title">Reservasi</span>
         <i class="fa-solid fa-table menu-icon"></i>
       </a>
     </li>
     <li class="nav-item">
       <a class="nav-link" href="{{ route('specialdishes.index')}}">
-        <span class="menu-title">Special dishes</span>
+        <span class="menu-title">Menu Spesial</span>
         <i class="fa-solid fa-bell-concierge menu-icon"></i>
       </a>
     </li>
     <li class="nav-item">
       <a class="nav-link" href="{{ route('testimonial.index')}}">
-        <span class="menu-title">Testimonials</span>
+        <span class="menu-title">Testimoni</span>
         <i class="fa-solid fa-star-half-stroke menu-icon"></i>
       </a>
     </li>
